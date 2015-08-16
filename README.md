@@ -22,25 +22,11 @@ A Simple ViewManager for initing, opening and closing views.
       },
 
       animateIn: function( data, done ) {
-        TweenMax.to(
-          this.el,
-          0.4,
-          {
-            opacity: 1,
-            onComplete: done
-          }
-        )
+        done();
       },
 
       animateOut: function( data, done ) {
-        TweenMax.to(
-          this.el,
-          0.4,
-          {
-            opacity: 0,
-            onComplete: done
-          }
-        )
+        done();
       },
 
       destroy: function( data, done ) {
@@ -51,4 +37,5 @@ A Simple ViewManager for initing, opening and closing views.
 
     var view1 = new View({title: "Home"});
     var view2 = new View({title: "About"});
+    viewManager.show( view1 );
 ```
