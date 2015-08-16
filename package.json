@@ -1,0 +1,25 @@
+{
+  "name": "micro-view-management",
+  "version": "1.0.0",
+  "description": "A Simple ViewManager for initing, opening and closing views.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krilo/Micro-View-Management.git"
+  },
+  "keywords": [
+    "view",
+    "manager",
+    "micro",
+    "vm"
+  ],
+  "author": "Kristofer Forsell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krilo/Micro-View-Management/issues"
+  },
+  "homepage": "https://github.com/krilo/Micro-View-Management#readme"
+}
