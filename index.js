@@ -51,7 +51,7 @@ class ViewManager {
       /**
        *  Bring in new View
        */
-      let bringInNewView = function() {
+      let bringInNewView = () => {
         this.currentView = newView;
         this.newView = null;
 
@@ -60,7 +60,7 @@ class ViewManager {
         } else {
           onNewIn();
         }
-      }.bind( this );
+      };
 
       /**
        * Bring out old View
@@ -78,11 +78,11 @@ class ViewManager {
       /**
        * Destroy old View
        */
-      let destroyOldView = function() {
+      let destroyOldView = () => {
         if( oldView.destroy ) {
           oldView.destroy( this.data, function() { } );
         }
-      }.bind( this );
+      };
 
       /**
        * If View already visible
