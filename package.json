@@ -21,5 +21,11 @@
   "bugs": {
     "url": "https://github.com/krilo/Micro-View-Management/issues"
   },
-  "homepage": "https://github.com/krilo/Micro-View-Management#readme"
+  "homepage": "https://github.com/krilo/Micro-View-Management#readme",
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true
+    }
+  }
 }

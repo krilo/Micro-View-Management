@@ -1,3 +1,5 @@
+"use strict";
+
 class ViewManager {
 
   constructor() {
@@ -13,14 +15,14 @@ class ViewManager {
 
     this.data = data;
 
-    if( view != this.newView && view != this.currentView ) {
+    if( view !== this.newView && view !== this.currentView ) {
 
       /*
        * Destroy old view if needed
        */
 
       if( this.newView && this.newView.destroy ){
-        this.newView.destroy(this.data, function() { })
+        this.newView.destroy(this.data, function() { });
       }
 
       this.newView = view;
@@ -33,7 +35,7 @@ class ViewManager {
    */
 
   swap(newView, onComplete) {
-    if( newView == this.newView ) {
+    if( newView === this.newView ) {
       let oldView = this.currentView;
       let onOldOut;
 
@@ -87,10 +89,10 @@ class ViewManager {
        */
       if( this.currentView ) {
 
-        onOldOut = function() {
+        onOldOut = () => {
           destroyOldView();
           bringInNewView();
-        }.bind(this);
+        };
 
         takeOutOldView();
 
@@ -105,8 +107,8 @@ class ViewManager {
 
 }
 
-if (typeof module != "undefined" && module.exports) {
+if (typeof module !== "undefined" && module.exports) {
   module.exports = function instance(settings){
-    return new ViewManager(settings)
+    return new ViewManager(settings);
   };
 }
